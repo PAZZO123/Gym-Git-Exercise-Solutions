@@ -279,6 +279,136 @@ remote:
 To https://github.com/PAZZO123/Git-Exercises.git
  * [new branch]      ft/bundle-2 -> ft/bundle-2
 branch 'ft/bundle-2' set up to track 'origin/ft/bundle-2'.
+```
+
+### Exercise 2
+
+```bash
+
+USER@LAPTOP-MGOER4DS MINGW64 ~/desktop/thegym/git_exercises (master)
+$ git fetch
+remote: Enumerating objects: 1, done.
+remote: Counting objects: 100% (1/1), done.
+remote: Total 1 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+Unpacking objects: 100% (1/1), 958 bytes | 239.00 KiB/s, done.
+From https://github.com/PAZZO123/Git-Exercises
+   0d24f27..065129c  master     -> origin/master
+
+USER@LAPTOP-MGOER4DS MINGW64 ~/desktop/thegym/git_exercises (master)
+$ git merge
+Updating 0d24f27..065129c
+Fast-forward
+ Services.html | 11 +++++++++++
+ about.html    |  1 +
+ home.html     | 11 +++++++++++
+ team.html     |  1 +
+ 4 files changed, 24 insertions(+)
+ create mode 100644 Services.html
+ create mode 100644 about.html
+ create mode 100644 home.html
+ create mode 100644 team.html
+USER@LAPTOP-MGOER4DS MINGW64 ~/desktop/thegym/git_exercises (master)
+$ git checkout ft/service-redesign
+Switched to branch 'ft/service-redesign'
+Your branch is up to date with 'origin/master'.
+USER@LAPTOP-MGOER4DS MINGW64 ~/desktop/thegym/git_exercises (ft/service-redesign)
+$ git  status
+On branch ft/service-redesign
+Your branch is ahead of 'origin/master' by 1 commit.
+  (use "git push" to publish your local commits)
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   Services.html
+USER@LAPTOP-MGOER4DS MINGW64 ~/desktop/thegym/git_exercises (ft/service-redesign)
+$ git add .
+
+USER@LAPTOP-MGOER4DS MINGW64 ~/desktop/thegym/git_exercises (ft/service-redesign)
+$ git commit -m 'Changed Services'
+[ft/service-redesign 8d80292] Changed Services
+ 1 files changed, 7 insertions(+), 1 deletions(-)
+ USER@LAPTOP-MGOER4DS MINGW64 ~/desktop/thegym/git_exercises (ft/service-redesign)
+$ git push -u origin ft/service-redesign
+Enumerating objects: 8, done.
+Counting objects: 100% (8/8), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (6/6), done.
+Writing objects: 100% (6/6), 669 bytes | 669.00 KiB/s, done.
+Total 6 (delta 4), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (4/4), completed with 1 local objects.
+remote:
+remote: Create a pull request for 'ft/service-redesign' on GitHub by visiting:
+remote:      https://github.com/PAZZO123/Git-Exercises/pull/new/ft/service-redesign
+remote:
+To https://github.com/PAZZO123/Git-Exercises.git
+ * [new branch]      ft/service-redesign -> ft/service-redesign
+branch 'ft/service-redesign' set up to track 'origin/ft/service-redesign'.
+USER@LAPTOP-MGOER4DS MINGW64 ~/desktop/thegym/Git_Exercises (ft/service-redesign)
+$ git checkout master
+Switched to branch 'master'
+Your branch is up to date with 'origin/master'.
+
+USER@LAPTOP-MGOER4DS MINGW64 ~/desktop/thegym/Git_Exercises (master)
+$
+USER@LAPTOP-MGOER4DS MINGW64 ~/desktop/thegym/git_exercises (master)
+$ git add .
+
+USER@LAPTOP-MGOER4DS MINGW64 ~/desktop/thegym/git_exercises (master)
+$ git commit -m 'Changed Services In Master'
+[master 8d80292] Changed Services
+ 1 files changed, 7 insertions(+), 1 deletions(-)
+ USER@LAPTOP-MGOER4DS MINGW64 ~/desktop/thegym/git_exercises (master)
+$ git push -u origin master
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (4/4), 669 bytes | 669.00 KiB/s, done.
+Total 6 (delta 4), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (4/4), completed with 1 local objects.
+remote:
+remote: Create a pull request for 'master' on GitHub by visiting:
+remote:      https://github.com/PAZZO123/Git-Exercises/pull/new/master
+remote:
+To https://github.com/PAZZO123/Git-Exercises.git
+ * [new branch]      master -> master
+branch 'master' set up to track 'master'.
+
+USER@LAPTOP-MGOER4DS MINGW64 ~/desktop/thegym/Git_Exercises (master)
+$ git checkout ft/service-redesign
+Switched to branch 'ft/service-redesign'
+Your branch is up to date with 'origin/ft/service-redesign'.
+
+USER@LAPTOP-MGOER4DS MINGW64 ~/desktop/thegym/Git_Exercises (ft/service-redesign)
+$ git merge master
+Auto-merging Services.html
+CONFLICT (content): Merge conflict in Services.html
+Automatic merge failed; fix conflicts and then commit the result.
+
+USER@LAPTOP-MGOER4DS MINGW64 ~/desktop/thegym/Git_Exercises (ft/service-redesign|MERGING)
+$
+USER@LAPTOP-MGOER4DS MINGW64 ~/desktop/thegym/Git_Exercises (ft/service-redesign|MERGING)
+$ git add .
+
+USER@LAPTOP-MGOER4DS MINGW64 ~/desktop/thegym/Git_Exercises (ft/service-redesign|MERGING)
+$ git commit -m 'Resolving conflict'
+[ft/service-redesign 6112cff] Resolving conflict
+
+USER@LAPTOP-MGOER4DS MINGW64 ~/desktop/thegym/Git_Exercises (ft/service-redesign)
+$ git push -u origin ft/service-redesign
+Enumerating objects: 7, done.
+Counting objects: 100% (7/7), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 365 bytes | 365.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/PAZZO123/Git-Exercises.git
+   8d80292..6112cff  ft/service-redesign -> ft/service-redesign
+branch 'ft/service-redesign' set up to track 'origin/ft/service-redesign'.
+
+
 
 
 ```
+
