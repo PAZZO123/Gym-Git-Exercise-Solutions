@@ -98,4 +98,18 @@ branch 'test' set up to track 'origin/test'.
 USER@LAPTOP-MGOER4DS MINGW64 ~/desktop/thegym/git_exercises (test)
 $
 
+USER@LAPTOP-MGOER4DS MINGW64 ~/desktop/thegym/git_exercises (test)
+$ git switch dev
+Switched to branch 'dev'
+
+USER@LAPTOP-MGOER4DS MINGW64 ~/desktop/thegym/git_exercises (dev)
+$ git branch -d test
+Deleted branch test (was 0d24f27).
+
+USER@LAPTOP-MGOER4DS MINGW64 ~/desktop/thegym/git_exercises (dev)
+$ git branch
+* dev
+  master
+
+USER@LAPTOP-MGOER4DS MINGW64 ~/desktop/thegym/git_exercises (dev)
 ```
