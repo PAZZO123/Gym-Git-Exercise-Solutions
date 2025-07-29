@@ -113,3 +113,120 @@ $ git branch
 
 USER@LAPTOP-MGOER4DS MINGW64 ~/desktop/thegym/git_exercises (dev)
 ```
+
+### Exercise2
+
+```bash
+USER@LAPTOP-MGOER4DS MINGW64 ~/desktop/thegym/git_exercises (dev)
+$ echo htm>home.html
+
+USER@LAPTOP-MGOER4DS MINGW64 ~/desktop/thegym/git_exercises (dev)
+$ git add home.html
+warning: in the working copy of 'home.html', LF will be replaced by CRLF the next time Git touches it
+
+USER@LAPTOP-MGOER4DS MINGW64 ~/desktop/thegym/git_exercises (dev)
+$ git stash
+Saved working directory and index state WIP on dev: 0d24f27 Creating First File
+USER@LAPTOP-MGOER4DS MINGW64 ~/desktop/thegym/git_exercises (dev)
+$ echo about >about.html
+USER@LAPTOP-MGOER4DS MINGW64 ~/desktop/thegym/git_exercises (dev)
+$ git add about.html
+warning: in the working copy of 'about.html', LF will be replaced by CRLF the next time Git touches it
+
+USER@LAPTOP-MGOER4DS MINGW64 ~/desktop/thegym/git_exercises (dev)
+$ git stash
+Saved working directory and index state WIP on dev: 0d24f27 Creating First File
+
+USER@LAPTOP-MGOER4DS MINGW64 ~/desktop/thegym/git_exercises (dev)
+$ git stash list
+stash@{0}: WIP on dev: 0d24f27 Creating First File
+stash@{1}: WIP on dev: 0d24f27 Creating First File
+
+USER@LAPTOP-MGOER4DS MINGW64 ~/desktop/thegym/git_exercises (dev)
+USER@LAPTOP-MGOER4DS MINGW64 ~/desktop/thegym/git_exercises (dev)
+$ echo Team>team.html
+
+USER@LAPTOP-MGOER4DS MINGW64 ~/desktop/thegym/git_exercises (dev)
+$ git add team.html
+warning: in the working copy of 'team.html', LF will be replaced by CRLF the next time Git touches it
+
+USER@LAPTOP-MGOER4DS MINGW64 ~/desktop/thegym/git_exercises (dev)
+$ git stash
+Saved working directory and index state WIP on dev: 0d24f27 Creating First File
+
+USER@LAPTOP-MGOER4DS MINGW64 ~/desktop/thegym/git_exercises (dev)
+$ git stash list
+stash@{0}: WIP on dev: 0d24f27 Creating First File
+stash@{1}: WIP on dev: 0d24f27 Creating First File
+stash@{2}: WIP on dev: 0d24f27 Creating First File
+
+USER@LAPTOP-MGOER4DS MINGW64 ~/desktop/thegym/git_exercises (dev)
+$ git stash pop stash@{1}
+On branch dev
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   about.html
+
+Dropped stash@{1} (b8a70fb8d0d1ad9cb3d1d6f2267b51a8fac66aaa)
+
+USER@LAPTOP-MGOER4DS MINGW64 ~/desktop/thegym/git_exercises (dev)
+$ git stash list
+stash@{0}: WIP on dev: 0d24f27 Creating First File
+stash@{1}: WIP on dev: 0d24f27 Creating First File
+
+USER@LAPTOP-MGOER4DS MINGW64 ~/desktop/thegym/git_exercises (dev)
+$ git stash pop stash@{1}
+On branch dev
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   about.html
+        new file:   home.html
+
+Dropped stash@{1} (b79cf809e5dfedcf79657e45c195a8aa6beea218)
+USER@LAPTOP-MGOER4DS MINGW64 ~/desktop/thegym/git_exercises (dev)
+$ git commit -m "Just a Test"
+[dev d0491b8] Just a Test
+ 2 files changed, 12 insertions(+)
+ create mode 100644 about.html
+ create mode 100644 home.html
+
+USER@LAPTOP-MGOER4DS MINGW64 ~/desktop/thegym/git_exercises (dev)
+$ git push -u origin dev
+fatal: unable to access 'https://github.com/PAZZO123/Git-Exercises.git/': Recv failure: Connection was reset
+
+USER@LAPTOP-MGOER4DS MINGW64 ~/desktop/thegym/git_exercises (dev)
+$ git push -u origin dev
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (4/4), 482 bytes | 160.00 KiB/s, done.
+Total 4 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/PAZZO123/Git-Exercises.git
+   0d24f27..d0491b8  dev -> dev
+branch 'dev' set up to track 'origin/dev'.
+
+USER@LAPTOP-MGOER4DS MINGW64 ~/desktop/thegym/git_exercises (dev)
+USER@LAPTOP-MGOER4DS MINGW64 ~/desktop/thegym/git_exercises (dev)
+$ git stash pop stash@{0}
+On branch dev
+Your branch is up to date with 'origin/dev'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   team.html
+
+Dropped stash@{0} (d2768e2a6e7b0c7b47b2541f10aff1c37d427511)
+
+USER@LAPTOP-MGOER4DS MINGW64 ~/desktop/thegym/git_exercises (dev)
+$ git commit -m "Just a Test foor team"
+[dev c6f2d46] Just a Test foor team
+ 1 file changed, 1 insertion(+)
+ create mode 100644 team.html
+ USER@LAPTOP-MGOER4DS MINGW64 ~/desktop/thegym/git_exercises (dev)
+$ git reset --hard
+HEAD is now at c6f2d46 Just a Test foor team
+
+
+
+```
