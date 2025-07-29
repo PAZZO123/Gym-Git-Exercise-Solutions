@@ -2,8 +2,7 @@
 ## Bundle 1
 ### Exercise 1
 
-
-```bash
+``` bash
 
 USER@LAPTOP-MGOER4DS MINGW64 ~/desktop/thegym
 $ mkdir Git_Exercises
@@ -46,8 +45,6 @@ No commits yet
 Changes to be committed:
   (use "git rm --cached <file>..." to unstage)
         new file:   myfile.js
-
-
 USER@LAPTOP-MGOER4DS MINGW64 ~/desktop/thegym/git_exercises (master)
 $ git commit -m "Creating First File"
 [master (root-commit) 0d24f27] Creating First File
