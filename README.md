@@ -31,40 +31,42 @@ myfile.js
 
 USER@LAPTOP-MGOER4DS MINGW64 ~/desktop/thegym/git_exercises (main)
 $ git branch -M master
-
 USER@LAPTOP-MGOER4DS MINGW64 ~/desktop/thegym/git_exercises (master)
+$ git branch -M main
+
+USER@LAPTOP-MGOER4DS MINGW64 ~/desktop/thegym/git_exercises (main)
 $ git add myfile.js
 warning: in the working copy of 'myfile.js', LF will be replaced by CRLF the next time Git touches it
 
-USER@LAPTOP-MGOER4DS MINGW64 ~/desktop/thegym/git_exercises (master)
+USER@LAPTOP-MGOER4DS MINGW64 ~/desktop/thegym/git_exercises (main)
 $ git status
-On branch master
+On branch main
 
 No commits yet
 
 Changes to be committed:
   (use "git rm --cached <file>..." to unstage)
         new file:   myfile.js
-USER@LAPTOP-MGOER4DS MINGW64 ~/desktop/thegym/git_exercises (master)
+USER@LAPTOP-MGOER4DS MINGW64 ~/desktop/thegym/git_exercises (main)
 $ git commit -m "Creating First File"
-[master (root-commit) 0d24f27] Creating First File
+[main (root-commit) 0d24f27] Creating First File
  1 file changed, 1 insertion(+)
  create mode 100644 myfile.js
-USER@LAPTOP-MGOER4DS MINGW64 ~/desktop/thegym/git_exercises (master)
+USER@LAPTOP-MGOER4DS MINGW64 ~/desktop/thegym/git_exercises (main)
 $ git remote add origin https://github.com/PAZZO123/Git-Exercises.git
-USER@LAPTOP-MGOER4DS MINGW64 ~/desktop/thegym/git_exercises (master)
-$ git push -u origin master
+USER@LAPTOP-MGOER4DS MINGW64 ~/desktop/thegym/git_exercises (main)
+$ git push -u origin main
 Enumerating objects: 3, done.
 Counting objects: 100% (3/3), done.
 Writing objects: 100% (3/3), 232 bytes | 232.00 KiB/s, done.
 Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
 To https://github.com/PAZZO123/Git-Exercises.git
- * [new branch]      master -> master
-branch 'master' set up to track 'origin/master'.
-USER@LAPTOP-MGOER4DS MINGW64 ~/desktop/thegym/git_exercises (master)
+ * [new branch]      main -> main
+branch 'main' set up to track 'origin/main'.
+USER@LAPTOP-MGOER4DS MINGW64 ~/desktop/thegym/git_exercises (main)
 $ git branch dev
 
-USER@LAPTOP-MGOER4DS MINGW64 ~/desktop/thegym/git_exercises (master)
+USER@LAPTOP-MGOER4DS MINGW64 ~/desktop/thegym/git_exercises (main)
 $ git switch dev
 Switched to branch 'dev'
 
@@ -109,7 +111,7 @@ Deleted branch test (was 0d24f27).
 USER@LAPTOP-MGOER4DS MINGW64 ~/desktop/thegym/git_exercises (dev)
 $ git branch
 * dev
-  master
+  main
 
 USER@LAPTOP-MGOER4DS MINGW64 ~/desktop/thegym/git_exercises (dev)
 ```
@@ -285,16 +287,16 @@ branch 'ft/bundle-2' set up to track 'origin/ft/bundle-2'.
 
 ```bash
 
-USER@LAPTOP-MGOER4DS MINGW64 ~/desktop/thegym/git_exercises (master)
+USER@LAPTOP-MGOER4DS MINGW64 ~/desktop/thegym/git_exercises (main)
 $ git fetch
 remote: Enumerating objects: 1, done.
 remote: Counting objects: 100% (1/1), done.
 remote: Total 1 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
 Unpacking objects: 100% (1/1), 958 bytes | 239.00 KiB/s, done.
 From https://github.com/PAZZO123/Git-Exercises
-   0d24f27..065129c  master     -> origin/master
+   0d24f27..065129c  main     -> origin/main
 
-USER@LAPTOP-MGOER4DS MINGW64 ~/desktop/thegym/git_exercises (master)
+USER@LAPTOP-MGOER4DS MINGW64 ~/desktop/thegym/git_exercises (main)
 $ git merge
 Updating 0d24f27..065129c
 Fast-forward
@@ -307,14 +309,14 @@ Fast-forward
  create mode 100644 about.html
  create mode 100644 home.html
  create mode 100644 team.html
-USER@LAPTOP-MGOER4DS MINGW64 ~/desktop/thegym/git_exercises (master)
+USER@LAPTOP-MGOER4DS MINGW64 ~/desktop/thegym/git_exercises (main)
 $ git checkout ft/service-redesign
 Switched to branch 'ft/service-redesign'
-Your branch is up to date with 'origin/master'.
+Your branch is up to date with 'origin/main'.
 USER@LAPTOP-MGOER4DS MINGW64 ~/desktop/thegym/git_exercises (ft/service-redesign)
 $ git  status
 On branch ft/service-redesign
-Your branch is ahead of 'origin/master' by 1 commit.
+Your branch is ahead of 'origin/main' by 1 commit.
   (use "git push" to publish your local commits)
 Changes not staged for commit:
   (use "git add <file>..." to update what will be committed)
@@ -344,21 +346,21 @@ To https://github.com/PAZZO123/Git-Exercises.git
  * [new branch]      ft/service-redesign -> ft/service-redesign
 branch 'ft/service-redesign' set up to track 'origin/ft/service-redesign'.
 USER@LAPTOP-MGOER4DS MINGW64 ~/desktop/thegym/Git_Exercises (ft/service-redesign)
-$ git checkout master
-Switched to branch 'master'
-Your branch is up to date with 'origin/master'.
+$ git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
 
-USER@LAPTOP-MGOER4DS MINGW64 ~/desktop/thegym/Git_Exercises (master)
+USER@LAPTOP-MGOER4DS MINGW64 ~/desktop/thegym/Git_Exercises (main)
 $
-USER@LAPTOP-MGOER4DS MINGW64 ~/desktop/thegym/git_exercises (master)
+USER@LAPTOP-MGOER4DS MINGW64 ~/desktop/thegym/git_exercises (main)
 $ git add .
 
-USER@LAPTOP-MGOER4DS MINGW64 ~/desktop/thegym/git_exercises (master)
-$ git commit -m 'Changed Services In Master'
-[master 8d80292] Changed Services
+USER@LAPTOP-MGOER4DS MINGW64 ~/desktop/thegym/git_exercises (main)
+$ git commit -m 'Changed Services In main'
+[main 8d80292] Changed Services
  1 files changed, 7 insertions(+), 1 deletions(-)
- USER@LAPTOP-MGOER4DS MINGW64 ~/desktop/thegym/git_exercises (master)
-$ git push -u origin master
+ USER@LAPTOP-MGOER4DS MINGW64 ~/desktop/thegym/git_exercises (main)
+$ git push -u origin main
 Enumerating objects: 5, done.
 Counting objects: 100% (5/5), done.
 Delta compression using up to 12 threads
@@ -367,20 +369,20 @@ Writing objects: 100% (4/4), 669 bytes | 669.00 KiB/s, done.
 Total 6 (delta 4), reused 0 (delta 0), pack-reused 0
 remote: Resolving deltas: 100% (4/4), completed with 1 local objects.
 remote:
-remote: Create a pull request for 'master' on GitHub by visiting:
-remote:      https://github.com/PAZZO123/Git-Exercises/pull/new/master
+remote: Create a pull request for 'main' on GitHub by visiting:
+remote:      https://github.com/PAZZO123/Git-Exercises/pull/new/main
 remote:
 To https://github.com/PAZZO123/Git-Exercises.git
- * [new branch]      master -> master
-branch 'master' set up to track 'master'.
+ * [new branch]      main -> main
+branch 'main' set up to track 'main'.
 
-USER@LAPTOP-MGOER4DS MINGW64 ~/desktop/thegym/Git_Exercises (master)
+USER@LAPTOP-MGOER4DS MINGW64 ~/desktop/thegym/Git_Exercises (main)
 $ git checkout ft/service-redesign
 Switched to branch 'ft/service-redesign'
 Your branch is up to date with 'origin/ft/service-redesign'.
 
 USER@LAPTOP-MGOER4DS MINGW64 ~/desktop/thegym/Git_Exercises (ft/service-redesign)
-$ git merge master
+$ git merge main
 Auto-merging Services.html
 CONFLICT (content): Merge conflict in Services.html
 Automatic merge failed; fix conflicts and then commit the result.
