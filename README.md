@@ -386,6 +386,36 @@ $ git merge main
 Auto-merging Services.html
 CONFLICT (content): Merge conflict in Services.html
 Automatic merge failed; fix conflicts and then commit the result.
+USER@LAPTOP-MGOER4DS MINGW64 ~/desktop/thegym/Git_Exercises (ft/service-redesign|MERGING)
+$ git diff
+diff --cc Services.html
+index ef2e309,7bd1f7f..0000000
+--- a/Services.html
++++ b/Services.html
+@@@ -6,14 -6,11 +6,18 @@@
+      <title>Document</title>
+  </head>
+  <body>
+++<<<<<<< HEAD
+ +    <h1>Our OLd Services</h1>
+++=======
++     <h1>Our  Main Services</h1>
+++>>>>>>> main
+      <ul>
+ -        <li>one</li>
+ -        <li>two</li>
+ -        <li>three</li>
+ +        <li>First</li>
+ +        <li>
+ +            second
+ +        </li>
+ +        <li>Third</li>
+ +
+      </ul>
+  </body>
+  </html>
+
+USER@LAPTOP-MGOER4DS MINGW64 ~/desktop/thegym/Git_Exercises (ft/service-redesign|MERGING
 
 USER@LAPTOP-MGOER4DS MINGW64 ~/desktop/thegym/Git_Exercises (ft/service-redesign|MERGING)
 $
