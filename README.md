@@ -439,8 +439,285 @@ To https://github.com/PAZZO123/Git-Exercises.git
    8d80292..6112cff  ft/service-redesign -> ft/service-redesign
 branch 'ft/service-redesign' set up to track 'origin/ft/service-redesign'.
 
+```
+## Bundle 3
+### Exercise 1
+
+```bash
+USER@LAPTOP-MGOER4DS MINGW64 ~/desktop/thegym/Git_Exercises (main)
+$ git checkout -b ft/team-page
+Switched to a new branch 'ft/team-page'
+
+USER@LAPTOP-MGOER4DS MINGW64 ~/desktop/thegym/Git_Exercises (ft/team-page)
+$ touch team.htm
+
+USER@LAPTOP-MGOER4DS MINGW64 ~/desktop/thegym/Git_Exercises (ft/team-page)
+$ git add team.htm
+warning: in the working copy of 'team.htm', LF will be replaced by CRLF the next time Git touches it
+
+USER@LAPTOP-MGOER4DS MINGW64 ~/desktop/thegym/Git_Exercises (ft/team-page)
+$ git stash
+Saved working directory and index state WIP on ft/team-page: da9206d Second change in main
+
+USER@LAPTOP-MGOER4DS MINGW64 ~/desktop/thegym/Git_Exercises (ft/team-page)
+$ git stash pop
+On branch ft/team-page
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   team.htm
+
+Dropped refs/stash@{0} (548df1e2ba386f724802b846d6a3dc9d01d8723a)
+
+USER@LAPTOP-MGOER4DS MINGW64 ~/desktop/thegym/Git_Exercises (ft/team-page)
+$ git commit -m "Add Team.htm to Team-page"
+[ft/team-page dc05025] Add Team.htm to Team-page
+ 1 file changed, 11 insertions(+)
+ create mode 100644 team.htm
+USER@LAPTOP-MGOER4DS MINGW64 ~/desktop/thegym/Git_Exercises (ft/team-page)
+$ git push -u origin ft/team-page
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 435 bytes | 435.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+remote:
+remote: Create a pull request for 'ft/team-page' on GitHub by visiting:
+remote:      https://github.com/PAZZO123/Git-Exercises/pull/new/ft/team-page
+remote:
+To https://github.com/PAZZO123/Git-Exercises.git
+ * [new branch]      ft/team-page -> ft/team-page
+branch 'ft/team-page' set up to track 'origin/ft/team-page'.
+USER@LAPTOP-MGOER4DS MINGW64 ~/desktop/thegym/Git_Exercises (ft/team-page)
+$ git log
+commit dc050258e07d55c2e73fb35390aeea2a0d11f459 (HEAD -> ft/team-page, origin/ft/team-page)
+Author: PAZZO123 <smbabazipatrick@gmail.com>
+Date:   Wed Jul 30 17:10:38 2025 +0200
+
+    Add Team.htm to Team-page
+
+commit da9206dc1162792e0fe8949c80838666c7684056 (origin/main, main, ft/contact-page)
+Author: PAZZO123 <smbabazipatrick@gmail.com>
+Date:   Wed Jul 30 10:41:18 2025 +0200
+
+    Second change in main
+
+commit a907672e6ff8d0ced027b3ef811d3c81231d844a
+Author: PAZZO123 <smbabazipatrick@gmail.com>
+Date:   Tue Jul 29 20:58:11 2025 +0200
+
+    Second change in master branch
+
+commit 065129c8711217d26eead12297c6fd36d749ab6f
+Merge: 0d24f27 ccb7786
+Author: Straton patrick Mbabazi <154052094+PAZZO123@users.noreply.github.com>
+Date:   Tue Jul 29 20:27:12 2025 +0200
+
+    Merge pull request #1 from PAZZO123/ft/bundle-2
+
+    Ft/bundle 2-Added another files home.hml,about.html,team.html and services.html
+
+commit ccb77862f8278dc34de614316d9a2b4d150389c6 (origin/ft/bundle-2, ft/bundle-2)
+Author: PAZZO123 <smbabazipatrick@gmail.com>
+Date:   Tue Jul 29 19:23:07 2025 +0200
+
+    Adding Services
+
+commit c6f2d46b6e3b281dd6171a69ab645f22b8dcbfed (origin/dev, dev)
+Author: PAZZO123 <smbabazipatrick@gmail.com>
+Date:   Tue Jul 29 18:16:18 2025 +0200
+
+    Just a Test foor team
+
+commit d0491b892b3e774dbd88b5ca9286730dda66f3a1
+Author: PAZZO123 <smbabazipatrick@gmail.com>
+Date:   Tue Jul 29 18:08:13 2025 +0200
+
+    Just a Test
+
+commit 0d24f2793117f0a6586c85d565b54581873d3693 (origin/test)
+Author: PAZZO123 <smbabazipatrick@gmail.com>
+Date:   Tue Jul 29 17:02:20 2025 +0200
+
+    Creating First File
+USER@LAPTOP-MGOER4DS MINGW64 ~/desktop/thegym/Git_Exercises (ft/team-page)
+$ git checkout ft/contact-page
+Switched to branch 'ft/contact-page'
+
+USER@LAPTOP-MGOER4DS MINGW64 ~/desktop/thegym/Git_Exercises (ft/contact-page)
+$ git cherry-pick  dc050258e07d55c2e73fb35390aeea2a0d11f459
+[ft/contact-page 7b7bbba] Add Team.htm to Team-page
+ Date: Wed Jul 30 17:10:38 2025 +0200
+ 1 file changed, 11 insertions(+)
+ create mode 100644 team.htm
+
+USER@LAPTOP-MGOER4DS MINGW64 ~/desktop/thegym/Git_Exercises (ft/contact-page)
+$ touch contact.html
+
+USER@LAPTOP-MGOER4DS MINGW64 ~/desktop/thegym/Git_Exercises (ft/contact-page)
+$ git add contact.html
+warning: in the working copy of 'contact.html', LF will be replaced by CRLF the next time Git touches it
+
+USER@LAPTOP-MGOER4DS MINGW64 ~/desktop/thegym/Git_Exercises (ft/contact-page)
+$ git stash
+Saved working directory and index state WIP on ft/contact-page: 7b7bbba Add Team.htm to Team-page
+
+USER@LAPTOP-MGOER4DS MINGW64 ~/desktop/thegym/Git_Exercises (ft/contact-page)
+$ git stash pop
+On branch ft/contact-page
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   contact.html
+
+Dropped refs/stash@{0} (f7848b3ba83d29e6f07d290e69cd22bf79edb066)
+
+USER@LAPTOP-MGOER4DS MINGW64 ~/desktop/thegym/Git_Exercises (ft/contact-page)
+$ git commit -m "Add Contact Page File"
+[ft/contact-page 07c9c2f] Add Contact Page File
+ 1 file changed, 11 insertions(+)
+ create mode 100644 contact.html
+
+USER@LAPTOP-MGOER4DS MINGW64 ~/desktop/thegym/Git_Exercises (ft/contact-page)
+$ git push -u origin ft/contact-page
+Enumerating objects: 7, done.
+Counting objects: 100% (7/7), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (6/6), done.
+Writing objects: 100% (6/6), 716 bytes | 716.00 KiB/s, done.
+Total 6 (delta 3), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (3/3), completed with 1 local object.
+remote:
+remote: Create a pull request for 'ft/contact-page' on GitHub by visiting:
+remote:      https://github.com/PAZZO123/Git-Exercises/pull/new/ft/contact-page
+remote:
+To https://github.com/PAZZO123/Git-Exercises.git
+ * [new branch]      ft/contact-page -> ft/contact-page
+branch 'ft/contact-page' set up to track 'origin/ft/contact-page'.
+USER@LAPTOP-MGOER4DS MINGW64 ~/desktop/thegym/Git_Exercises (ft/contact-page)
+$ git checkout -b ft/faq-page
+Switched to a new branch 'ft/faq-page'
+
+USER@LAPTOP-MGOER4DS MINGW64 ~/desktop/thegym/Git_Exercises (ft/faq-page)
+$ touch faq.html
+
+USER@LAPTOP-MGOER4DS MINGW64 ~/desktop/thegym/Git_Exercises (ft/faq-page)
+$ git status
+On branch ft/faq-page
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        faq.html
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+USER@LAPTOP-MGOER4DS MINGW64 ~/desktop/thegym/Git_Exercises (ft/faq-page)
+$ git add faq.html
+warning: in the working copy of 'faq.html', LF will be replaced by CRLF the next time Git touches it
+
+USER@LAPTOP-MGOER4DS MINGW64 ~/desktop/thegym/Git_Exercises (ft/faq-page)
+$ git commit -m "Add Faq Page"
+[ft/faq-page fddf2ec] Add Faq Page
+ 1 file changed, 11 insertions(+)
+ create mode 100644 faq.html
+
+USER@LAPTOP-MGOER4DS MINGW64 ~/desktop/thegym/Git_Exercises (ft/faq-page)
+$ git push -u origin ft/faq-page
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 433 bytes | 433.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+remote:
+remote: Create a pull request for 'ft/faq-page' on GitHub by visiting:
+remote:      https://github.com/PAZZO123/Git-Exercises/pull/new/ft/faq-page
+remote:
+To https://github.com/PAZZO123/Git-Exercises.git
+ * [new branch]      ft/faq-page -> ft/faq-page
+branch 'ft/faq-page' set up to track 'origin/ft/faq-page'.
+USER@LAPTOP-MGOER4DS MINGW64 ~/desktop/thegym/Git_Exercises (ft/faq-page)
+$ git revert  dc050258e07d55c2e73fb35390aeea2a0d11f459
+[ft/faq-page aa2b883] Revert "Add Team.htm to Team-page"
+ 1 file changed, 11 deletions(-)
+ delete mode 100644 team.htm
+
+USER@LAPTOP-MGOER4DS MINGW64 ~/desktop/thegym/Git_Exercises (ft/faq-page)
+$ git log
+USER@LAPTOP-MGOER4DS MINGW64 ~/desktop/thegym/Git_Exercises (ft/faq-page)
+$ git push -u origin ft/faq-page
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (2/2), 295 bytes | 295.00 KiB/s, done.
+Total 2 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/PAZZO123/Git-Exercises.git
+   fddf2ec..aa2b883  ft/faq-page -> ft/faq-page
+branch 'ft/faq-page' set up to track 'origin/ft/faq-page'.
+
+```
+### Exercise 2
+```bash
+USER@LAPTOP-MGOER4DS MINGW64 ~/desktop/thegym/Git_Exercises (ft/faq-page)
+$ git checkout -b ft/home-page-redesign
+Switched to a new branch 'ft/home-page-redesign'
+
+USER@LAPTOP-MGOER4DS MINGW64 ~/desktop/thegym/Git_Exercises (ft/home-page-redesign)
+$ git checkout main
+Switched to branch 'main'
+Your branch is based on 'origin/master', but the upstream is gone.
+  (use "git branch --unset-upstream" to fixup)
+
+USER@LAPTOP-MGOER4DS MINGW64 ~/desktop/thegym/Git_Exercises (main)
+$ git add .
 
 
+USER@LAPTOP-MGOER4DS MINGW64 ~/desktop/thegym/Git_Exercises (main)
+$ git commit -m "feat: Add Some Changes"
+[main 88f86ad] feat: Add Some Changes
+ 1 file changed, 1 insertion(+)
+USER@LAPTOP-MGOER4DS MINGW64 ~/desktop/thegym/Git_Exercises (main)
+$ git push -u origin main
+To https://github.com/PAZZO123/Git-Exercises.git
+ ! [rejected]        main -> main (fetch first)
+error: failed to push some refs to 'https://github.com/PAZZO123/Git-Exercises.git'
+hint: Updates were rejected because the remote contains work that you do not
+hint: have locally. This is usually caused by another repository pushing to
+hint: the same ref. If you want to integrate the remote changes, use
+hint: 'git pull' before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+
+USER@LAPTOP-MGOER4DS MINGW64 ~/desktop/thegym/Git_Exercises (ft/home-page-redesign)
+$ git rebase main
+Successfully rebased and updated refs/heads/ft/home-page-redesign.
+
+USER@LAPTOP-MGOER4DS MINGW64 ~/desktop/thegym/Git_Exercises (ft/home-page-redesign)
+$ git log
+USER@LAPTOP-MGOER4DS MINGW64 ~/desktop/thegym/Git_Exercises (ft/home-page-redesign)
+$ git add .
+
+USER@LAPTOP-MGOER4DS MINGW64 ~/desktop/thegym/Git_Exercises (ft/home-page-redesign)
+$ git commit -m "Feat: After rebase"
+[ft/home-page-redesign 40537f9] Feat: After rebase
+ 1 file changed, 3 insertions(+)
+ USER@LAPTOP-MGOER4DS MINGW64 ~/desktop/thegym/Git_Exercises (ft/home-page-redesign)
+$ git push -u origin ft/home-page-redesign
+Enumerating objects: 19, done.
+Counting objects: 100% (19/19), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (17/17), done.
+Writing objects: 100% (17/17), 1.85 KiB | 474.00 KiB/s, done.
+Total 17 (delta 9), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (9/9), completed with 1 local object.
+remote:
+remote: Create a pull request for 'ft/home-page-redesign' on GitHub by visiting:
+remote:      https://github.com/PAZZO123/Git-Exercises/pull/new/ft/home-page-redesign
+remote:
+To https://github.com/PAZZO123/Git-Exercises.git
+ * [new branch]      ft/home-page-redesign -> ft/home-page-redesign
+branch 'ft/home-page-redesign' set up to track 'origin/ft/home-page-redesign'.
 
 ```
 
