@@ -976,7 +976,138 @@ $ history
   428  git commit -m "feat: Add welcome to restaurant"
   429  git push -u origin main
   430  history
+```
+## BUndle 6
+### Exercise 1
+```bash
+USER@LAPTOP-MGOER4DS MINGW64 ~/desktop/thegym/git-cafe-exercise (main)
+$ git checkout -b ft/menu-page
+Switched to a new branch 'ft/menu-page'
 
+USER@LAPTOP-MGOER4DS MINGW64 ~/desktop/thegym/git-cafe-exercise (ft/menu-page)
+$ touch menu.html
 
-``
+USER@LAPTOP-MGOER4DS MINGW64 ~/desktop/thegym/git-cafe-exercise (ft/menu-page)
+$ git add menu.html
+warning: in the working copy of 'menu.html', LF will be replaced by CRLF the next time Git touches it
+
+USER@LAPTOP-MGOER4DS MINGW64 ~/desktop/thegym/git-cafe-exercise (ft/menu-page)
+$ git commit -m "feat:Adding menu page"
+[ft/menu-page 134a4b6] feat:Adding menu page
+ 1 file changed, 11 insertions(+)
+ create mode 100644 menu.html
+
+USER@LAPTOP-MGOER4DS MINGW64 ~/desktop/thegym/git-cafe-exercise (ft/menu-page)
+$ git push -u origin ft/menu-page
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 451 bytes | 225.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+remote:
+remote: Create a pull request for 'ft/menu-page' on GitHub by visiting:
+remote:      https://github.com/PAZZO123/git-cafe-exercise/pull/new/ft/menu-page
+remote:
+To https://github.com/PAZZO123/git-cafe-exercise.git
+ * [new branch]      ft/menu-page -> ft/menu-page
+branch 'ft/menu-page' set up to track 'origin/ft/menu-page'.
+
+USER@LAPTOP-MGOER4DS MINGW64 ~/desktop/thegym/git-cafe-exercise (ft/menu-page)
+```
+### Exercise 2
+```bash
+USER@LAPTOP-MGOER4DS MINGW64 ~/desktop/thegym/git-cafe-exercise (ft/menu-page)
+$ git checkout -b ft/bug-fix
+Switched to a new branch 'ft/bug-fix'
+
+USER@LAPTOP-MGOER4DS MINGW64 ~/desktop/thegym/git-cafe-exercise (ft/bug-fix)
+$ git status
+On branch ft/bug-fix
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   index-4.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+USER@LAPTOP-MGOER4DS MINGW64 ~/desktop/thegym/git-cafe-exercise (ft/bug-fix)
+$ git add index-4.html
+
+USER@LAPTOP-MGOER4DS MINGW64 ~/desktop/thegym/git-cafe-exercise (ft/bug-fix)
+$ gi commit -m "feat:fixing bug "
+bash: gi: command not found
+
+USER@LAPTOP-MGOER4DS MINGW64 ~/desktop/thegym/git-cafe-exercise (ft/bug-fix)
+$ git commit -m "feat:fixing Contact bug "
+[ft/bug-fix adfc3cd] feat:fixing Contact bug
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+USER@LAPTOP-MGOER4DS MINGW64 ~/desktop/thegym/git-cafe-exercise (ft/bug-fix)
+$ git push -u origin ft/bug-fix
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 312 bytes | 312.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+remote:
+remote: Create a pull request for 'ft/bug-fix' on GitHub by visiting:
+remote:      https://github.com/PAZZO123/git-cafe-exercise/pull/new/ft/bug-fix
+remote:
+To https://github.com/PAZZO123/git-cafe-exercise.git
+ * [new branch]      ft/bug-fix -> ft/bug-fix
+branch 'ft/bug-fix' set up to track 'origin/ft/bug-fix'.
+
+```
+### Exercise 3
+```bash
+USER@LAPTOP-MGOER4DS MINGW64 ~/desktop/thegym/git-cafe-exercise (ft/bug-fix)
+$ git checkout -b ft/hot-fix
+Switched to a new branch 'ft/hot-fix'
+
+USER@LAPTOP-MGOER4DS MINGW64 ~/desktop/thegym/git-cafe-exercise (ft/hot-fix)
+$ git status
+On branch ft/hot-fix
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   index-4.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+USER@LAPTOP-MGOER4DS MINGW64 ~/desktop/thegym/git-cafe-exercise (ft/hot-fix)
+$ git add  index-4.html
+
+USER@LAPTOP-MGOER4DS MINGW64 ~/desktop/thegym/git-cafe-exercise (ft/hot-fix)
+$ git commit -m "feat: changing Fone number"
+[ft/hot-fix a404796] feat: changing Fone number
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+USER@LAPTOP-MGOER4DS MINGW64 ~/desktop/thegym/git-cafe-exercise (ft/hot-fix)
+$ git push -u origin ft/hot-fix
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 311 bytes | 155.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+remote:
+remote: Create a pull request for 'ft/hot-fix' on GitHub by visiting:
+remote:      https://github.com/PAZZO123/git-cafe-exercise/pull/new/ft/hot-fix
+remote:
+To https://github.com/PAZZO123/git-cafe-exercise.git
+ * [new branch]      ft/hot-fix -> ft/hot-fix
+branch 'ft/hot-fix' set up to track 'origin/ft/hot-fix'.
+
+USER@LAPTOP-MGOER4DS MINGW64 ~/desktop/thegym/git-cafe-exercise (ft/hot-fix)
+
+```
+### Exercise 4
+```bash
+No  Commands
+```
 
