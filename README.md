@@ -888,3 +888,95 @@ $ git show 4525ad3f5146aabcf6c0115305295fb6f5f88db7
 
 ```
 
+## BUndle 5
+### Exercise 1
+```bash
+ 413  git checkout main
+  414  git  pull
+  415  git mv home.html index.html
+  416  git status
+  417  git commit -"feat: rename home to index"
+  418  git commit -m "feat: rename home to index"
+  419  git push -u origin main
+  420  history
+- On your Github repo enable Github pages
+Done
+- Check if the link is publicly visible to anyone
+Done
+```
+### Exercise 1
+```bash
+USER@LAPTOP-MGOER4DS MINGW64 ~/desktop/thegym/Git_Exercises (main)
+$ cd ..
+
+USER@LAPTOP-MGOER4DS MINGW64 ~/desktop/thegym
+$ git clone https://github.com/PAZZO123/git-cafe-exercise.git
+Cloning into 'git-cafe-exercise'...
+remote: Enumerating objects: 107, done.
+remote: Counting objects: 100% (15/15), done.
+remote: Compressing objects: 100% (11/11), done.
+remote: Total 107 (delta 5), reused 4 (delta 4), pack-reused 92 (from 1)
+Receiving objects: 100% (107/107), 1.95 MiB | 1.11 MiB/s, done.
+Resolving deltas: 100% (5/5), done.
+
+USER@LAPTOP-MGOER4DS MINGW64 ~/desktop/thegym
+$ cd git-cafe-exercise.git
+bash: cd: git-cafe-exercise.git: No such file or directory
+
+USER@LAPTOP-MGOER4DS MINGW64 ~/desktop/thegym
+$ ls
+Cloud/  Codewars/  Friday/  GATE1/  GATE2/  Git_Exercises/  Gym-Git-Exercise-Solutions/  Udacity/  Webs/  git-cafe-exercise/  javascript/  js-practical-exercises/
+
+USER@LAPTOP-MGOER4DS MINGW64 ~/desktop/thegym
+$ cd git-cafe-exercise
+
+USER@LAPTOP-MGOER4DS MINGW64 ~/desktop/thegym/git-cafe-exercise (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   index.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+USER@LAPTOP-MGOER4DS MINGW64 ~/desktop/thegym/git-cafe-exercise (main)
+$ git add index.html
+
+USER@LAPTOP-MGOER4DS MINGW64 ~/desktop/thegym/git-cafe-exercise (main)
+$ git commit -m "feat: Add welcome to restaurant"
+[main 806ada5] feat: Add welcome to restaurant
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+USER@LAPTOP-MGOER4DS MINGW64 ~/desktop/thegym/git-cafe-exercise (main)
+$ git push -u origin main
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 336 bytes | 336.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/PAZZO123/git-cafe-exercise.git
+   d1d3f9c..806ada5  main -> main
+branch 'main' set up to track 'origin/main'.
+
+USER@LAPTOP-MGOER4DS MINGW64 ~/desktop/thegym/git-cafe-exercise (main)
+$ history
+
+ 421  cd ..
+  422  git clone https://github.com/PAZZO123/git-cafe-exercise.git
+  423  cd git-cafe-exercise.git
+  424  ls
+  425  cd git-cafe-exercise
+  426  git status
+  427  git add index.html
+  428  git commit -m "feat: Add welcome to restaurant"
+  429  git push -u origin main
+  430  history
+
+
+``
+
